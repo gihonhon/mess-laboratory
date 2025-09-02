@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jelajah Nusantara - Blog Perjalanan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Jelajah Nusantara</h1>
+        <nav>
+          <button id="hamburger-button" aria-label="Buka menu navigasi">
+            &#9776;
+          </button>
+          <ul id="nav-list">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#destinasi">Destinasi</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="content-wrapper">
+        <article class="main-article" id="destinasi">
+          <header class="article-header">
+            <h2>Menjelajahi Keindahan Tersembunyi Raja Ampat</h2>
+            <p class="meta-info">
+              Dipublikasikan pada
+              <time datetime="2025-09-02">2 September 2025</time> oleh Admin
+            </p>
+          </header>
+
+          <section class="slider-container">
+            <div class="slider-wrapper">
+              <div class="slide">
+                <img
+                  src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=1470&auto=format&fit=crop"
+                  alt="Pemandangan Raja Ampat 1"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://images.unsplash.com/photo-1590523282223-91b641e3a123?q=80&w=1470&auto=format&fit=crop"
+                  alt="Pemandangan Raja Ampat 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="https://images.unsplash.com/photo-1568449733682-95f2d1e073d8?q=80&w=1470&auto=format&fit=crop"
+                  alt="Pemandangan Raja Ampat 3"
+                />
+              </div>
+            </div>
+            <button class="slider-button prev" aria-label="Gambar sebelumnya">
+              &#10094;
+            </button>
+            <button class="slider-button next" aria-label="Gambar selanjutnya">
+              &#10095;
+            </button>
+          </section>
+
+          <p>
+            Selamat datang di surga bawah laut dunia! Raja Ampat di Papua Barat
+            adalah sebuah kepulauan yang menjadi impian para penyelam dan
+            pecinta alam. Dengan lebih dari 1.500 pulau kecil, perairan yang
+            jernih, dan keanekaragaman hayati laut yang tak tertandingi, tempat
+            ini benar-benar memukau.
+          </p>
+          <p>
+            Perjalanan kami dimulai dari Sorong, gerbang utama menuju kepulauan
+            ini. Dari sana, kami menaiki kapal feri menuju Waisai, ibu kota Raja
+            Ampat. Pemandangan gugusan pulau karst yang menjulang dari laut biru
+            kehijauan langsung menyambut kami, sebuah pertanda petualangan luar
+            biasa akan segera dimulai.
+          </p>
+
+          <section id="galeri">
+            <h3>Postingan Populer</h3>
+            <div id="popular-posts-container" class="posts-grid"></div>
+          </section>
+        </article>
+
+        <aside>
+          <div class="profile-card">
+            <h3>Tentang Penulis</h3>
+            <img
+              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374&auto=format&fit=crop"
+              alt="Foto profil penulis blog"
+              class="profile-picture"
+            />
+            <h4>Andi Saputra</h4>
+            <p>
+              Seorang petualang yang gemar mendokumentasikan keindahan alam
+              Indonesia. Berbagi cerita dan tips perjalanan melalui tulisan dan
+              fotografi.
+            </p>
+          </div>
+          <div class="social-links">
+            <h4>Ikuti Saya</h4>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer id="kontak">
+      <p>&copy; 2025 Jelajah Nusantara. Semua Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+/* --- Variabel Global dan Reset --- */
+:root {
+  --primary-color: #0d47a1; /* Biru Tua */
+  --secondary-color: #42a5f5; /* Biru Muda */
+  --background-color: #f4f7f9;
+  --text-color: #333;
+  --white-color: #ffffff;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* --- Header dan Navigasi --- */
+header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+}
+
+#hamburger-button {
+  display: none; /* Sembunyikan di desktop */
+  background: none;
+  border: none;
+  color: var(--white-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* --- Main Content Layout (Flexbox) --- */
+main {
+  padding: 2rem 5%;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.main-article {
+  flex: 3; /* Artikel mengambil 3 bagian ruang */
+  background-color: var(--white-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+aside {
+  flex: 1; /* Aside mengambil 1 bagian ruang */
+}
+
+/* --- Styling Artikel --- */
+.article-header h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.meta-info {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.main-article p {
+  margin-bottom: 1rem;
+}
+
+/* --- Slider Gambar --- */
+.slider-container {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  height: 400px;
+  object-fit: cover;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-button.prev {
+  left: 10px;
+}
+
+.slider-button.next {
+  right: 10px;
+}
+
+/* --- Konten Dinamis (Popular Posts) --- */
+#galeri h3 {
+  margin-top: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.post-card-content {
+  padding: 1rem;
+}
+
+.post-card-content h4 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+/* --- Aside (Sidebar) --- */
+.profile-card,
+.social-links {
+  background-color: var(--white-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--secondary-color);
+}
+
+aside h3,
+aside h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.social-links ul {
+  list-style-type: none;
+}
+
+.social-links li {
+  margin: 0.5rem 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem 5%;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  margin-top: 2rem;
+}
+
+/* --- Media Queries untuk Responsivitas --- */
+
+/* Tampilan Tablet (<= 768px) */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Ubah layout flex menjadi vertikal */
+  }
+
+  nav ul {
+    display: none; /* Sembunyikan navigasi default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav ul.active {
+    display: flex; /* Tampilkan navigasi saat kelas 'active' ditambahkan */
+  }
+
+  nav ul li {
+    padding: 0.8rem 0;
+  }
+
+  #hamburger-button {
+    display: block; /* Tampilkan tombol hamburger */
+  }
+
+  .slide img {
+    height: 300px;
+  }
+}
+
+/* Tampilan Mobile (<= 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 1rem 3%;
+  }
+
+  .main-article {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .slide img {
+    height: 200px;
+  }
+}
