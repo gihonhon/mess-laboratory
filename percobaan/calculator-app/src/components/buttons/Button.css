@@ -1,0 +1,37 @@
+.Button {
+    background: #333;
+    width: 80px;
+    height: 80px;
+    border-radius:  50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: filter 0.3s ease-in;
+}
+
+.Button:active,
+.Button:focus {
+    filter: brightness(150%);
+}
+
+.Button.zero {
+    width: 180px;
+    /* Set element yang ada di coloum pertama dan span 2 column */
+    grid-column: 1 / span 2; 
+    border-radius: 50.5px;
+    position: relative;
+    justify-content: flex-start;
+    padding-left: 2.2rem;
+}
+
+.Button.function {
+    color: black;
+    background: #a5a5a5;
+}
+
+.Button.operator {
+    background: #f1a33c;
+}
