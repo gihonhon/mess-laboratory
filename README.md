@@ -21,7 +21,7 @@ Kurang lebih struktur repo ini seperti berikut:
 ## 🚀 Cara Menikmati Repo Ini
 1. Clone dulu (kalau niat 😆):
    ```bash
-   git clone https://github.com/username/nama-repo.git
+   git clone https://github.com/gihonhon/mess-laboratory.git
 
 2. Jelajahi folder sesuai selera.
 
