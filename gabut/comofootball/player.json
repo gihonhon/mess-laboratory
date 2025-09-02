@@ -1,0 +1,386 @@
+[
+  {
+    "number": 1,
+    "name": "Jean Butez",
+    "position": "Goalkeeper",
+    "age": 30,
+    "nat": {
+      "alt": "France",
+      "flag": "./assets/flag/france.png"
+    },
+    "contract": "30.06.2028",
+    "market_value": "€3.50m"
+  },
+  {
+    "number": 44,
+    "name": "Nikola Cavlina",
+    "position": "Goalkeeper",
+    "age": 23,
+    "nat": {
+      "alt": "Croatia",
+      "flag": "./assets/flag/croatia.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€750k"
+  },
+  {
+    "number": 22,
+    "name": "Mauro Vigorito",
+    "position": "Goalkeeper",
+    "age": 35,
+    "nat": {
+      "alt": "Italy",
+      "flag": "./assets/flag/italy.png"
+    },
+    "contract": "-",
+    "market_value": "€150k"
+  },
+  {
+    "number": 12,
+    "name": "Henrique Menke",
+    "position": "Goalkeeper",
+    "age": 18,
+    "nat": {
+      "alt": "Brazil",
+      "flag": "./assets/flag/brazil.png"
+    },
+    "contract": "-",
+    "market_value": "-"
+  },
+  {
+    "number": "-",
+    "name": "Diego Carlos",
+    "position": "Centre-Back",
+    "age": 32,
+    "nat": {
+      "alt": "Brazil",
+      "flag": "./assets/flag/brazil.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€9.50m"
+  },
+  {
+    "number": "-",
+    "name": "Stefan Posch",
+    "position": "Centre-Back",
+    "age": 28,
+    "nat": {
+      "alt": "Austria",
+      "flag": "./assets/flag/austria.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€8.00m"
+  },
+  {
+    "number": 4,
+    "name": "Alberto Dossena",
+    "position": "Centre-Back",
+    "age": 26,
+    "nat": {
+      "alt": "Italy",
+      "flag": "./assets/flag/italy.png"
+    },
+    "contract": "30.06.2028",
+    "market_value": "€8.00m"
+  },
+  {
+    "number": 2,
+    "name": "Marc Oliver Kempf",
+    "position": "Centre-Back",
+    "age": 30,
+    "nat": {
+      "alt": "Germany",
+      "flag": "./assets/flag/germany.png"
+    },
+    "contract": "30.06.2027",
+    "market_value": "€3.00m"
+  },
+  {
+    "number": 5,
+    "name": "Edoardo Goldaniga",
+    "position": "Centre-Back",
+    "age": 31,
+    "nat": {
+      "alt": "Italy",
+      "flag": "./assets/flag/italy.png"
+    },
+    "contract": "30.06.2027",
+    "market_value": "€3.00m"
+  },
+  {
+    "number": 14,
+    "name": "Jacobo Ramón",
+    "position": "Centre-Back",
+    "age": 20,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2030",
+    "market_value": "€1.00m"
+  },
+  {
+    "number": 3,
+    "name": "Alex Valle",
+    "position": "Left-Back",
+    "age": 21,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€6.00m"
+  },
+  {
+    "number": 18,
+    "name": "Alberto Moreno",
+    "position": "Left-Back",
+    "age": 33,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€1.50m"
+  },
+  {
+    "number": "-",
+    "name": "Marco Sala",
+    "position": "Left-Back",
+    "age": 26,
+    "nat": {
+      "alt": "Italy",
+      "flag": "./assets/flag/italy.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€900k"
+  },
+  {
+    "number": 77,
+    "name": "Ignace Van der Brempt",
+    "position": "Right-Back",
+    "age": 23,
+    "nat": {
+      "alt": "Belgium",
+      "flag": "./assets/flag/belgium.png"
+    },
+    "contract": "30.06.2028",
+    "market_value": "€4.00m"
+  },
+  {
+    "number": 31,
+    "name": "Mërgim Vojvoda",
+    "position": "Right-Back",
+    "age": 30,
+    "nat": {
+      "alt": "Kosovo",
+      "flag": "./assets/flag/kosovo.png"
+    },
+    "contract": "30.06.2028",
+    "market_value": "€3.00m"
+  },
+  {
+    "number": 28,
+    "name": "Ivan Smolcic",
+    "position": "Right-Back",
+    "age": 25,
+    "nat": {
+      "alt": "Croatia",
+      "flag": "./assets/flag/croatia.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€1.80m"
+  },
+  {
+    "number": "-",
+    "name": "Peter Kovacik",
+    "position": "Right-Back",
+    "age": 23,
+    "nat": {
+      "alt": "Slovakia",
+      "flag": "./assets/flag/slovakia.png"
+    },
+    "contract": "-",
+    "market_value": "€1.00m"
+  },
+  {
+    "number": 23,
+    "name": "Máximo Perrone",
+    "position": "Defensive Midfield",
+    "age": 22,
+    "nat": {
+      "alt": "Argentina",
+      "flag": "./assets/flag/argentina.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€12.00m"
+  },
+  {
+    "number": 6,
+    "name": "Maxence Caqueret",
+    "position": "Central Midfield",
+    "age": 25,
+    "nat": {
+      "alt": "France",
+      "flag": "./assets/flag/france.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€16.00m"
+  },
+  {
+    "number": 33,
+    "name": "Lucas Da Cunha",
+    "position": "Central Midfield",
+    "age": 24,
+    "nat": {
+      "alt": "France",
+      "flag": "./assets/flag/france.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€10.00m"
+  },
+  {
+    "number": 8,
+    "name": "Sergi Roberto",
+    "position": "Central Midfield",
+    "age": 33,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€1.50m"
+  },
+  {
+    "number": 10,
+    "name": "Nico Paz",
+    "position": "Attacking Midfield",
+    "age": 20,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2028",
+    "market_value": "€35.00m"
+  },
+  {
+    "number": 20,
+    "name": "Martin Baturina",
+    "position": "Attacking Midfield",
+    "age": 22,
+    "nat": {
+      "alt": "Croatia",
+      "flag": "./assets/flag/croatia.png"
+    },
+    "contract": "30.06.2030",
+    "market_value": "€22.00m"
+  },
+  {
+    "number": "-",
+    "name": "Dele Alli",
+    "position": "Attacking Midfield",
+    "age": 29,
+    "nat": {
+      "alt": "England",
+      "flag": "./assets/flag/england.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€2.00m"
+  },
+  {
+    "number": 17,
+    "name": "Jesús Rodríguez",
+    "position": "Left Winger",
+    "age": 19,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2030",
+    "market_value": "€30.00m"
+  },
+  {
+    "number": 38,
+    "name": "Assane Diao",
+    "position": "Left Winger",
+    "age": 19,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€30.00m"
+  },
+  {
+    "number": 19,
+    "name": "Nicolas Kühn",
+    "position": "Right Winger",
+    "age": 25,
+    "nat": {
+      "alt": "Germany",
+      "flag": "./assets/flag/germany.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€12.00m"
+  },
+  {
+    "number": 42,
+    "name": "Jayden Addai",
+    "position": "Right Winger",
+    "age": 20,
+    "nat": {
+      "alt": "Netherlands",
+      "flag": "./assets/flag/netherlands.png"
+    },
+    "contract": "30.06.2030",
+    "market_value": "€1.50m"
+  },
+  {
+    "number": "-",
+    "name": "Samuel Ballet",
+    "position": "Right Winger",
+    "age": 24,
+    "nat": {
+      "alt": "Switzerland",
+      "flag": "./assets/flag/switzerland.png"
+    },
+    "contract": "30.06.2027",
+    "market_value": "€1.20m"
+  },
+  {
+    "number": 7,
+    "name": "Álvaro Morata",
+    "position": "Centre-Forward",
+    "age": 32,
+    "nat": {
+      "alt": "Spain",
+      "flag": "./assets/flag/spain.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€11.00m"
+  },
+  {
+    "number": 11,
+    "name": "Anastasios Douvikas",
+    "position": "Centre-Forward",
+    "age": 26,
+    "nat": {
+      "alt": "Greece",
+      "flag": "./assets/flag/greece.png"
+    },
+    "contract": "30.06.2029",
+    "market_value": "€10.00m"
+  },
+  {
+    "number": "-",
+    "name": "Alberto Cerri",
+    "position": "Centre-Forward",
+    "age": 29,
+    "nat": {
+      "alt": "Italy",
+      "flag": "./assets/flag/italy.png"
+    },
+    "contract": "30.06.2026",
+    "market_value": "€1.00m"
+  }
+]
