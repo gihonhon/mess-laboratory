@@ -1,0 +1,105 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  fullname      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  password      String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  courses       Course[]  @relation("UserToCourse")
+  accounts      Account[]
+  sessions      Session[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Materi {
+  MateriID     String  @id @default(cuid())
+  Materi_Title String
+  Kelas        Kelas   @relation("KelasToMateri", fields: [KelasID], references: [KelasID])
+  Subject      Subject @relation("SubjectToMateri", fields: [SubjectID], references: [SubjectID])
+  Course       Course  @relation("CourseToMateri", fields: [CourseID], references: [CourseID])
+  videos       Video[] @relation("MateriToVideo")
+  CourseID     String
+  KelasID      String
+  SubjectID    String
+}
+
+model Course {
+  CourseID     String   @id @default(cuid())
+  UserID       String
+  Title_Course String
+  UserList     User     @relation("UserToCourse", fields: [UserID], references: [id])
+  Bab_Materi   Materi[] @relation("CourseToMateri")
+}
+
+model Video {
+  VideoID     String @id @default(cuid())
+  MateriID    String
+  Url_path    String
+  Title_Video String
+  Short_Desc  String
+  Materi      Materi @relation("MateriToVideo", fields: [MateriID], references: [MateriID])
+}
+
+model Kelas {
+  KelasID  String    @id @default(cuid())
+  Kelas    String
+  materis  Materi[]  @relation("KelasToMateri")
+  subjects Subject[] @relation("SubjectToKelas")
+}
+
+model Subject {
+  SubjectID String   @id @default(cuid())
+  Subject   String
+  KelasID   String
+  kelas     Kelas    @relation("SubjectToKelas", fields: [KelasID], references: [KelasID])
+  materis   Materi[] @relation("SubjectToMateri")
+}

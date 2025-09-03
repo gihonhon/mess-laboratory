@@ -1,0 +1,119 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  ProviderAccountId String
+  refresh_Token     String? @db.Text
+  access_Token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_Token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, ProviderAccountId])
+}
+
+model User {
+  id        String      @id @default(cuid())
+  username  String?
+  email     String      @unique
+  password  String
+  image     String?
+  bio       String?
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  account   Account[]
+  sessions  Session[]
+  bookmarks Bookmarks[] @relation("UserToBookmarks")
+  recipes   Recipes[]   @relation("UserToRecipes")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Recipes {
+  id              String      @id @default(cuid())
+  userId          String
+  title           String
+  desc            String?
+  instruction     String[]
+  ingredients     String[]
+  picture         String?
+  categoryId      String
+  average_ratings Float?
+  category        Category    @relation("CategoryToRecipes", fields: [categoryId], references: [id])
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  bookmarks       Bookmarks[] @relation("BookmarkToRecipes")
+  ratings         Ratings[]   @relation("RecipesToRatings")
+  reviews         Reviews[]   @relation("RecipesToReviews")
+  user            User        @relation("UserToRecipes", fields: [userId], references: [id])
+}
+
+model Category {
+  id           String    @id @default(cuid())
+  listCategory String
+  recipes      Recipes[] @relation("CategoryToRecipes")
+}
+
+model Bookmarks {
+  id        String   @id @default(cuid())
+  userId    String
+  recipeId  String
+  createdAt DateTime @default(now())
+  recipes   Recipes  @relation("BookmarkToRecipes", fields: [recipeId], references: [id])
+  user      User     @relation("UserToBookmarks", fields: [userId], references: [id])
+
+  @@unique([userId, recipeId])
+}
+
+model Ratings {
+  id        String   @id @default(cuid())
+  userid    String
+  recipeId  String
+  rating    Float
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  recipes   Recipes  @relation("RecipesToRatings", fields: [recipeId], references: [id])
+}
+
+model Reviews {
+  id        String   @id @default(cuid())
+  userId    String
+  recipeId  String
+  comment   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  recipes   Recipes  @relation("RecipesToReviews", fields: [recipeId], references: [id])
+}

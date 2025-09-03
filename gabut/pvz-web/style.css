@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #6c9a56;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh:
+}
+
+canvas {
+    border: 2px solid #444;
+    background-color: #88cc66;
+    cursor: pointer;
+}
+
+#toolbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  align-items: center;
+}
+
+.plant-card {
+  padding: 5px 10px;
+  background: #eee;
+  border: 2px solid #666;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.plant-card.selected {
+  background: #b3e57d;
+  border-color: #2a8c2a;
+}
+
+#sun-counter {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.plant-card.cooldown {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#game-over-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.game-over-box {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px #000;
+}
+
+#restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
